@@ -9,4 +9,4 @@ async def ping(ctx: commands.Context) -> None:
     await ctx.reply("pong")
 
 
-bot.run(environ["BOT_TOKEN"])
+bot.run(environ["DISCORD_BOT_TOKEN"])
