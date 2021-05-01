@@ -1,6 +1,12 @@
-import discord
+from discord.ext import commands
 from os import environ
 
-client = discord.Client()
+bot = commands.Bot(command_prefix="!")
 
-client.run(environ["BOT_TOKEN"])
+
+@bot.command()
+async def ping(ctx: commands.Context) -> None:
+    await ctx.reply("pong")
+
+
+bot.run(environ["BOT_TOKEN"])
